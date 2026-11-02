@@ -1,5 +1,6 @@
-from ultralytics import YOLO
 import cv2
+
+from ultralytics import YOLO
 
 # 載入模型
 model = YOLO("/home/arthur/ultralytics/runs/detect/alphabet_200_model(m)/weights/best.pt")
@@ -12,7 +13,7 @@ while True:
     ret, frame = cap.read()
     if not ret:
         break
-    
+
     frame = cv2.convertScaleAbs(frame, alpha=1.2, beta=10)
     results = model(frame, conf=0.4, device="0", verbose=False)
 
@@ -29,8 +30,8 @@ while True:
             # 直接印出數字 ID
             print(f"ID: {int(cls_id)} | Conf: {conf:.2f}")
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break               
-        
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break
+
 cap.release()
 cv2.destroyAllWindows()
