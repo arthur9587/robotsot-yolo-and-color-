@@ -1,6 +1,8 @@
-from ultralytics import YOLO
-import cv2
 import os
+
+import cv2
+
+from ultralytics import YOLO
 
 # 1. 載入模型
 model = YOLO("/home/arthur/ultralytics/runs/detect/color_200_model/weights/best.pt")
