@@ -1,13 +1,13 @@
 names:
-- Black
-- Blue
-- Brown
-- Green
-- Orange
-- Purple
-- Red
-- White
-- yellow
+  - Black
+  - Blue
+  - Brown
+  - Green
+  - Orange
+  - Purple
+  - Red
+  - White
+  - yellow
 nc: 9
 roboflow:
   license: CC BY 4.0
